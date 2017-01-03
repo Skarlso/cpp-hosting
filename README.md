@@ -1,5 +1,4 @@
-# cpp-hosting
-C++ Hosting solution
+# C++ Hosting solution
 
 Notes:
 - CloudFormation
