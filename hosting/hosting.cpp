@@ -1,5 +1,10 @@
 #include <iostream>
+#include "actions.h"
+#include "create_command.h"
 
 int main(int argv, char* args[]) {
-    std::cout << "Test" << '\n';
+    Actions *action = new Actions;
+
+    CreateCommand *cc = new CreateCommand(action);
+    cc->execute();
 }

@@ -1,7 +1,7 @@
 CC= g++
 CFLAGS= -g -c -Wall -std=c++14 -stdlib=libc++
-LDFLAGS= -L. 
-SOURCES= hosting/hosting.cpp
+LDFLAGS= -L.
+SOURCES= hosting/hosting.cpp hosting/create_command.cpp hosting/actions.cpp
 INCLUDES= -I.
 OBJECTS= $(SOURCES:.cpp=.o)
 TARGET= host
