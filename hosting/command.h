@@ -3,8 +3,8 @@
 
 class Command
 {
-public:
-	virtual void execute() = 0;
+    public:
+        virtual void execute() = 0;
 };
 
 #endif
