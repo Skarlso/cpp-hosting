@@ -14,5 +14,6 @@ int main(int argv, char* args[]) {
 
     CreateCommand *cc = new CreateCommand(action);
     commands["create"] = cc;
+    commands["create"]->execute();
     return 0;
 }
