@@ -8,6 +8,7 @@ class CreateCommand : public Command
     public:
         CreateCommand(Actions *action) : mAction(action) {};
         void execute();
+        void help();
     private:
         Actions *mAction;
 };
