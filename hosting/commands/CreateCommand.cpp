@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include "CreateCommand.hpp"
-#include "../../commander/ArgumentRegistry.hpp"
-#include "../../commander/CommandDescriptor.hpp"
+#include "../../cpp-commander/src/ArgumentRegistry.hpp"
+#include "../../cpp-commander/src/CommandDescriptor.hpp"
 
 namespace Commands {
   void CreateCommand::Execute(Commander::ArgumentRegistry* args)

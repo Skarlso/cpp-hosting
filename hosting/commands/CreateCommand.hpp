@@ -2,9 +2,9 @@
 #define _CreateCommand_hpp_
 
 #include <string>
-#include "../../commander/Command.hpp"
-#include "../../commander/CommandDescriptor.hpp"
-#include "../../commander/ArgumentRegistry.hpp"
+#include "../../cpp-commander/src/Command.hpp"
+#include "../../cpp-commander/src/CommandDescriptor.hpp"
+#include "../../cpp-commander/src/ArgumentRegistry.hpp"
 
 
 namespace Commands {
