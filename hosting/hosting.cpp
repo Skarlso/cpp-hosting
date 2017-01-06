@@ -1,4 +1,4 @@
-#include "../commander/CommandRegistry.hpp"
+#include "../cpp-commander/src/CommandRegistry.hpp"
 
 #include "commands/CreateCommand.hpp"
 
