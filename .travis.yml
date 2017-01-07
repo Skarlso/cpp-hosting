@@ -4,5 +4,4 @@ language: cpp
 # Build Steps
 script:
     - cd build
-    - cmake .. && make
-    - make test
+    - cmake .. && cmake --build . && ctest
