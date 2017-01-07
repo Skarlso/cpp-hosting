@@ -10,8 +10,3 @@ $ git submodule update
 $ cd build && cmake ..
 $ make
 ```
-
-Notes:
-- CloudFormation
-- Code Deploy
-- Tar gzf the whole thing
