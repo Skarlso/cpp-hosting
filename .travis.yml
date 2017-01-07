@@ -1,0 +1,8 @@
+# Environment Setup
+language: cpp
+
+# Build Steps
+script:
+    - cd build
+    - cmake .. && make
+    - make test
