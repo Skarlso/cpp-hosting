@@ -1,5 +1,7 @@
 # C++ Hosting solution
 
+Build status: [![Build Status](https://travis-ci.org/Skarlso/furnace.svg?branch=master)](https://travis-ci.org/Skarlso/furnace)
+
 # Compile
 
 Thanks to cmake's out-of-source builds, this way, every build information will be under
