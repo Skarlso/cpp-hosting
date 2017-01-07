@@ -12,6 +12,10 @@ addons:
       - libboost1.55-all-dev
       - cmake
       - cmake-data
+      - gcc-6
+      - g++-6
+      - clang
+      - libc++-dev
 
 # Build Steps
 script:
