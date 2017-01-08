@@ -4,7 +4,7 @@ aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/commands COMMANDS_SOURCES)
 add_library(furnace_object OBJECT ${COMMANDS_SOURCES})
 
 # Adding AWS SDK.
-# set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/local/lib)
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} ../lib)
 find_library(aws-sdk-cpp
              NAMES aws-sdk-cpp
 )
