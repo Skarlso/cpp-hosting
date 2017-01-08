@@ -10,6 +10,7 @@ addons:
     #   - ubuntu-toolchain-r-test
     packages:
       - libboost1.55-all-dev
+      - openssl
     #   - cmake
     #   - cmake-data
     #   - gcc-4.9

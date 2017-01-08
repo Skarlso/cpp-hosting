@@ -7,7 +7,12 @@ add_library(furnace_object OBJECT ${COMMANDS_SOURCES})
 add_executable(furnace $<TARGET_OBJECTS:furnace_object> furnace.cpp)
 
 # # Adding any dylib from lib folder if present.
-file(GLOB LIBRARIES "../lib/*.dylib")
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    file(GLOB LIBRARIES "../lib/*.so")
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    file(GLOB LIBRARIES "../lib/*.dylib")
+endif()
+
 message("LIBRARIES = ${LIBRARIES}")
 target_link_libraries(furnace ${LIBRARIES})
 
