@@ -15,4 +15,6 @@ target_link_libraries(furnace ${LIBRARIES})
 # target_link_libraries(furnace ${PROJECT_SOURCE_DIR}/lib/libaws-cpp-sdk-core.dylib)
 target_link_libraries(furnace commander)
 
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
 install(TARGETS furnace RUNTIME DESTINATION "${CMAKE_BINARY_DIR}/bin")
