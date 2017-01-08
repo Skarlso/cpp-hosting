@@ -20,4 +20,4 @@ addons:
 # Build Steps
 script:
     - cd build
-    - cmake .. && cmake --build . && ctest
+    - cmake -DCMAKE_LIBRARY_PATH=../lib .. && cmake --build . && ctest
