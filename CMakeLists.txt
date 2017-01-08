@@ -11,10 +11,10 @@ set (CPACK_GENERATOR "TGZ")
 
 find_package(Boost COMPONENTS unit_test_framework system filesystem)
 enable_testing()
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_subdirectory("cpp-commander/src")
 add_subdirectory("furnace")
 add_subdirectory("tests")
 include_directories("furnace")
-include_directories("include")
 include(CPack)
