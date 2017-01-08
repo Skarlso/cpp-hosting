@@ -1,6 +1,6 @@
 # Environment Setup
 language: cpp
-
+dist: trusty
 # To get the latest cmake
 addons:
   apt:
