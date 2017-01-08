@@ -16,8 +16,6 @@ endif()
 message("LIBRARIES = ${LIBRARIES}")
 target_link_libraries(furnace ${LIBRARIES})
 
-# Adding specific AWS dependencies
-# target_link_libraries(furnace ${PROJECT_SOURCE_DIR}/lib/libaws-cpp-sdk-core.dylib)
 target_link_libraries(furnace commander)
 
 install(TARGETS furnace RUNTIME DESTINATION "${CMAKE_BINARY_DIR}/bin")
