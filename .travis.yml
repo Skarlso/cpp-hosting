@@ -13,8 +13,8 @@ addons:
       - openssl
     #   - cmake
     #   - cmake-data
-      - gcc-6
-      - g++-6
+      - gcc-5
+      - g++-5
     #   - clang
     #   - libc++-dev
 
