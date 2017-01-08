@@ -5,8 +5,8 @@ add_library(furnace_object OBJECT ${COMMANDS_SOURCES})
 
 # Adding AWS SDK.
 set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} ../lib)
-find_library(aws-sdk-cpp
-             NAMES aws-sdk-cpp
+find_library(aws-sdk-cpp-core
+             NAMES aws-sdk-cpp-core
 )
 
 # Use the created library to link to the source.
