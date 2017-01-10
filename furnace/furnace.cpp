@@ -1,6 +1,6 @@
-#include "../cpp-commander/src/CommandRegistry.hpp"
-#include "commands/CreateCommand.hpp"
+#include <Commander/CommandRegistry.hpp>
 #include <aws/core/Aws.h>
+#include "commands/CreateCommand.hpp"
 
 int main(int argc, const char *argv[])
 {
