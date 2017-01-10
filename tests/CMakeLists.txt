@@ -21,9 +21,9 @@ foreach(testSrc ${TEST_SRCS})
     target_link_libraries(${testName} ${Boost_LIBRARIES} commander)
     # Setting the target directory to build/testBin so the executable will be located there.
     set_target_properties(${testName} PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../build/testBin)
-    # Adding the test to run for the location which will be under ../build/testBin/$testName.
+      RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/test)
+    # Adding the test to run for the location which will be under {bindir}/bin/test/$testName.
     add_test(NAME ${testName}
-             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../build/testBin
-             COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/../build/testBin/${testName} )
+      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin/test
+      COMMAND ${CMAKE_BINARY_DIR}/bin/test/${testName})
 endforeach(testSrc)
