@@ -1,9 +1,12 @@
 bin/
+lib/
 *.o
 CMakeFiles
 CMakeCache.txt
 CPackConfig.cmake
 CPackSourceConfig.cmake
+CTestTestfile.cmake
 cmake_install.cmake
 Makefile
 .tags1
+Testing
