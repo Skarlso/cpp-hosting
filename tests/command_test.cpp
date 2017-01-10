@@ -1,7 +1,7 @@
 #define BOOST_TEST_MODULE commands
 #define BOOST_TEST_DYN_LINK
 #include <boost/test/unit_test.hpp>
-#include "../cpp-commander/src/CommandRegistry.hpp"
+#include <Commander/CommandRegistry.hpp>
 #include "../furnace/commands/CreateCommand.hpp"
 
 BOOST_AUTO_TEST_CASE( registry )

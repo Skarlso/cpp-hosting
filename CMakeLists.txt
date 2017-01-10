@@ -15,7 +15,8 @@ find_package(Boost COMPONENTS unit_test_framework system filesystem)
 enable_testing()
 
 # libraries to use
-add_subdirectory("cpp-commander/src")
+add_subdirectory("cpp-commander/Commander")
+include_directories("cpp-commander")
 
 # AWS SDK
 if (NOT AWS_SDK_PATH)
