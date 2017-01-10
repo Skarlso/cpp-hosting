@@ -10,3 +10,4 @@ cmake_install.cmake
 Makefile
 .tags1
 Testing
+aws-sdk-cpp/

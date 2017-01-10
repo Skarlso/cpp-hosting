@@ -15,5 +15,5 @@ addons:
 
 # Build Steps
 script:
-    - cd build
-    - cmake .. && cmake --build . && ctest
+  - ./scripts/prepare-aws-sdk.sh
+  - cmake . && cmake --build . && ctest
