@@ -11,3 +11,4 @@ Makefile
 .tags1
 Testing
 aws-sdk-cpp/
+.DS_Store
