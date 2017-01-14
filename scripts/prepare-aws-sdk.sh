@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LIBS_WE_NEED="core;s3;cloudformation"
+LIBS_WE_NEED="core;s3;cloudformation;iam;ec2"
 
 if [ ! -d aws-sdk-cpp ]; then
   echo "AWS SDK Source: Not found"
