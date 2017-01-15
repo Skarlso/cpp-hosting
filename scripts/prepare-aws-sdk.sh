@@ -19,6 +19,7 @@ cmake \
   -DBUILD_ONLY="${LIBS_WE_NEED}" \
   -DCMAKE_BUILD_TYPE=Release \
   -DENABLE_TESTING=OFF \
+  -DCMAKE_TOOLCHAIN_FILE=64bit.toolchain
   -Wno-dev \
   ..
 
