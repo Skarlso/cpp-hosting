@@ -7,4 +7,4 @@ before_install:
     - docker pull skarlso/gcc
 
 script:
-    - docker run --rm -e TRAVIS_JOB_ID=${TRAVIS_JOB_ID} -v $(pwd):/data skarlso/gcc -w /data /bin/bash -lc "cd build && cmake .. && cmake --build . && ctest"
+    - docker run --rm -e TRAVIS_JOB_ID=${TRAVIS_JOB_ID} -v $(pwd):/data -w /data skarlso/gcc /bin/bash -lc "cd build && cmake .. && cmake --build . && ctest"
