@@ -9,8 +9,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set (CMAKE_CXX_STANDARD 14)
 set (CPACK_GENERATOR "TGZ")
 
-option(AWS_SDK_PATH "Path to AWS SDK" "")
-
+# option(AWS_SDK_PATH $ENV{AWS_SDK_PATH} ON)
+set (AWS_SDK_PATH $ENV{AWS_SDK_PATH})
+message("PATH: ${AWS_SDK_PATH}")
 find_package(Boost COMPONENTS unit_test_framework system filesystem)
 enable_testing()
 

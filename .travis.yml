@@ -1,19 +1,10 @@
-# Environment Setup
 language: cpp
-dist: trusty
-addons:
-  apt:
-    sources:
-      - boost-latest
-      - llvm-toolchain-precise-3.6
-      - ubuntu-toolchain-r-test
-    packages:
-      - libboost1.55-all-dev
-      - openssl
-      - gcc-6
-      - g++-6
+sudo: required
+services:
+    - docker
 
-# Build Steps
+before_install:
+    - docker pull skarlso/gcc
+
 script:
-  - ./scripts/prepare-aws-sdk.sh
-  - cmake . && cmake --build . && ctest
+    - docker run --rm -e TRAVIS_JOB_ID=${TRAVIS_JOB_ID} -v $(pwd):/data skarlso/gcc -w /data /bin/bash -lc "cd build && cmake .. && cmake --build . && ctest"
