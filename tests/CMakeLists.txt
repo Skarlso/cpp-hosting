@@ -18,7 +18,7 @@ foreach(testSrc ${TEST_SRCS})
     # Use the created object under the furnace project so the this executable
     # has access to the project source.
     add_executable(${testName} $<TARGET_OBJECTS:furnace_object> ${testSrc})
-    target_link_libraries(${testName} ${Boost_LIBRARIES} commander)
+    target_link_libraries(${testName} ${Boost_LIBRARIES})
     # Setting the target directory to build/testBin so the executable will be located there.
     set_target_properties(${testName} PROPERTIES
       RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/test)

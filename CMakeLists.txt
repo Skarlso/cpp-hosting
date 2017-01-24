@@ -26,6 +26,11 @@ endif()
 set(aws-sdk-cpp_DIR ${AWS_SDK_PATH})
 find_package(aws-sdk-cpp)
 
+# General -l switch addition for the linker so every object / executable / tests are getting the here included header files.
+link_libraries(aws-cpp-sdk-core)
+link_libraries(aws-cpp-sdk-cloudformation)
+link_libraries(commander)
+
 # Furnace
 add_subdirectory("furnace")
 add_subdirectory("tests")

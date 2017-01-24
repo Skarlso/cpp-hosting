@@ -12,3 +12,4 @@ Makefile
 Testing
 aws-sdk-cpp/
 .DS_Store
+*.swp
