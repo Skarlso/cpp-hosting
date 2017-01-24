@@ -7,9 +7,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set (CMAKE_CXX_STANDARD 14)
+set (CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=0")
 set (CPACK_GENERATOR "TGZ")
-
-option(AWS_SDK_PATH "Path to AWS SDK" "")
 
 find_package(Boost COMPONENTS unit_test_framework system filesystem)
 enable_testing()
@@ -19,8 +18,10 @@ add_subdirectory("cpp-commander/Commander")
 include_directories("cpp-commander")
 
 # AWS SDK
-if (NOT AWS_SDK_PATH)
-  set(AWS_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-cpp/build")
+if (DEFINED ENV{AWS_SDK_PATH})
+    set(AWS_SDK_PATH "$ENV{AWS_SDK_PATH}/build")
+else()
+    set(AWS_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-cpp/build")
 endif()
 
 set(aws-sdk-cpp_DIR ${AWS_SDK_PATH})
